@@ -68,7 +68,8 @@ Admin Password: 1234
 
 ---
 
-
+![Homepage Screenshot](Images/img1.jpg)
+![Admin Panel Screenshot](Images/img2.jpg)
 
 
 
