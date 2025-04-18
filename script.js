@@ -89,6 +89,11 @@ function logoutAdmin() {
   document.getElementById('mainPage').style.display = 'block';
 }
 
+function backToHome() {
+  document.getElementById('adminPanel').style.display = 'none';
+  document.getElementById('mainPage').style.display = 'block';
+}
+
 function addNewProduct() {
   const name = document.getElementById('newProductName').value;
   const price = parseInt(document.getElementById('newProductPrice').value);
