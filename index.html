@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sabari's Mart - Secure Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="loginPage">
+    <h2>Welcome to Sabari's Mart</h2>
+    <p style="text-align:center">Please login to access the inventory system</p>
+    <input type="text" id="mainUsername" placeholder="Username">
+    <input type="password" id="mainPassword" placeholder="Password">
+    <button class="small-btn" onclick="mainLogin()">Login</button>
+  </div>
+
+  <div class="container" id="mainPage">
+    <h2>Sabari's Mart</h2>
+    <div class="datetime" id="currentDateTime"></div>
+    <form id="productForm">
+      <select id="productSelect" required><option value="">-- Select Product --</option></select>
+      <input type="number" id="productQty" placeholder="Quantity" required>
+      <input type="number" id="productPrice" placeholder="Price (per unit)" readonly>
+      <div class="total-box">Total: ₹<span id="totalPrice">0</span></div>
+      <button type="submit">Add Product</button>
+    </form>
+
+    <div id="printSection">
+      <table>
+        <thead>
+          <tr><th>Product</th><th>Qty</th><th>Unit</th><th>Unit Price</th><th>Total</th><th>Date/Time</th></tr>
+        </thead>
+        <tbody id="productTable"></tbody>
+      </table>
+    </div>
+
+    <div class="actions">
+      <button class="small-btn" onclick="printOnlyTable()">Print Table</button>
+      <button class="small-btn" onclick="showAdminLogin()">Admin Page</button>
+    </div>
+  </div>
+
+  <div class="container" id="adminLogin">
+    <h2>Admin Login</h2>
+    <input type="password" id="adminPassword" placeholder="Enter Admin Password">
+    <button class="small-btn" onclick="validateAdmin()">Login</button>
+    <button class="small-btn" onclick="goBack()">Back</button>
+  </div>
+
+  <div class="container" id="adminPanel">
+    <h2>Admin Panel - Manage Products</h2>
+    <div class="actions">
+      <button class="small-btn" onclick="logoutAdmin()">Logout</button>
+    </div>
+    <h4>Add New Product</h4>
+    <input type="text" id="newProductName" placeholder="Product Name">
+    <input type="number" id="newProductPrice" placeholder="Price">
+    <select id="newProductUnit">
+      <option value="pcs">Unit (pcs)</option>
+      <option value="kg">Kilogram (kg)</option>
+    </select>
+    <button class="small-btn" onclick="addNewProduct()">Add Product</button>
+
+    <h4>Delete Product</h4>
+    <select id="deleteProductName"></select>
+    <button class="small-btn" onclick="deleteProduct()">Delete Product</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
