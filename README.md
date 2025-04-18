@@ -6,7 +6,7 @@ A lightweight, web-based inventory management system tailored for grocery shops.
 
 ## Live Preview
 
-> Coming soon (you can host it using GitHub Pages or Netlify)
+https://sabarisasi.github.io/inventory-project/
 
 ## Repository
 
@@ -68,9 +68,6 @@ Admin Password: 1234
 
 ---
 
-Screenshots
-
-> (Add screenshots here in future for better presentation)
 
 
 
